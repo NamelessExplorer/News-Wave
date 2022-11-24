@@ -24,8 +24,8 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div>
-        <Router>
+    <Router>
+        <div>  
           <Navbar />
           <LoadingBar
             height={3}
@@ -42,12 +42,8 @@ export default class App extends Component {
             <Route exact path="/sports" element={<News setProgress={this.setProgress} apiKey={this.apiKey} pageSize={5} country='in' category='sports' key="sports" />} />
             <Route exact path="/technology" element={<News setProgress={this.setProgress} apiKey={this.apiKey} pageSize={5} country='in' category='technology' key="technology" />} />
           </Routes>
-
-
-
-        </Router>
-
       </div>
+      </Router>
     )
   }
 }
